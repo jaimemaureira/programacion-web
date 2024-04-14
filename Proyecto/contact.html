@@ -73,7 +73,7 @@
         
         <div class="container">
             
-            <form class="row g-2" style="margin-top: 20px;">
+            <form class="row g-2" style="margin-top: 20px;" action=>
 
                 <!--creacion contenido del formulario de contacto-->
 
@@ -82,7 +82,7 @@
                     <!--creamos una nueva clase llamada col la cual determina mediante su valor la cantidad de columnas que se utelizaran-->
                     <label for="inputname" class="margin-top"
                         class="form-label">Nombres</label><!--con label ponemos el nombre de etiqueta para la barra de texto-->
-                    <input type="text" class="form-control" id="inputname" placeholder="Nombres" style="font-size: 10px">
+                    <input type="text" class="form-control" id="inputname" placeholder="Nombres" style="font-size: 10px required">
                     <!--con el input se crea un cuadro para ingresar texto-->
                 </div>
 
@@ -90,49 +90,49 @@
                 <!--creacion box APELLIDO-->
                 <div class="col-5">
                     <label for="inputAp" class="margin-top" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" id="inputAp" placeholder="Apellidos" style="font-size: 10px">
+                    <input type="text" class="form-control" id="inputAp" placeholder="Apellidos" style="font-size: 10px" required>
                 </div>
 
                 <!--creacion box Direccion-->
                 <div class="col-10" style="margin-top: 10px; margin-left: 25px">
                     <label for="inputDireccion" class="margin-top" class="form-label">Direccion</label>
                     <input type="text" class="form-control" id="inputDireccion" placeholder="Direccion"
-                        style="font-size: 10px">
+                        style="font-size: 10px" required>
                 </div>
 
                 <!--creacion box Cuidad-->
                 <div class="col-5" style="margin-top: 10px; margin-left: 25px; margin-right: 15px;">
                     <label for="inputCuidad" class="margin-top" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCuidad" placeholder="Ciudad" style="font-size: 10px">
+                    <input type="text" class="form-control" id="inputCuidad" placeholder="Ciudad" style="font-size: 10px" required>
                 </div>
 
                 <!--creacion box Comuna-->
                 <div class="col-5">
                     <label for="inputComuna" class="margin-top" class="form-label">Comuna</label>
                     <input type="text" class="form-control" id="inputDireccion" placeholder="Comuna"
-                        style="font-size: 10px">
+                        style="font-size: 10px" required>
                 </div>
 
                 <!--creacion box Telefono-->
                 <div class="col-5" style="margin-top: 10px; margin-left: 25px; margin-right: 15px;">
                     <label for="inputPhone" class="margin-top" class="form-label">Teléfono</label>
-                    <input type="text" class="form-control" id="inputPhone" placeholder="+569xxxxxxxx" style="font-size: 10px">
+                    <input type="text" class="form-control" id="inputPhone" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
                 </div>
 
                 <!--creacion box Teléfono2-->
                 <div class="col-5">
                     <label for="inputphone2" class="margin-top" class="form-label">Teléfono 2</label>
-                    <input type="text" class="form-control" id="inputphhone2" placeholder="+569xxxxxxxx" style="font-size: 10px">
+                    <input type="text" class="form-control" id="inputphhone2" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
                 </div>
 
                 <!--creacion caja mail-->
                 <div class="col-6" style="margin-top: 10px; margin-left: 25px; margin-right: 15px;">
                     <label for="inputText" class="margin-top" class="form-label">Mail</label>
-                    <input type="email" class="form-control" id="inputMail" placeholder="Mail" style="font-size: 10px">
+                    <input type="email" class="form-control" id="inputMail" placeholder="Mail" style="font-size: 10px" required>
                 </div>
 
                 <!--creacion de comentarios-->
-                <div class="col-10" style="margin-top: 10px; margin-left: 25px; margin-right: 15px; color: white;">
+                <div class="col-10" style="margin-top: 10px; margin-left: 25px; margin-right: 15px; color: white;" required>
 
                     <label for="comentarios" class="form-label">Comentarios</label>
                     <textarea class="form-control" style="height: 150px" id="comentarios" rows="3" placeholder="Dejanos tu cometario"></textarea>
