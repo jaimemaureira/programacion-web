@@ -27,10 +27,60 @@
             }
         });
     
+        document.getElementById('inputRut').addEventListener('input', function(event) {                                                 // cambio VALIDACIÓN RUT
+            var rut = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+            var rutPattern = /^[0-9]{1,2}\.?[0-9]{3}\.?[0-9]{3}-?[0-9kK]{1}$/; // Expresión regular para validar RUT
 
+            var rutError = document.getElementById('rutError');
+
+            if (!rutPattern.test(rut)) { // Si el RUT no coincide con el patrón
+                rutError.style.display = 'inline'; // Mostrar el mensaje de error
+            } else {
+                rutError.style.display = 'none'; // Ocultar el mensaje de error si el RUT es válido
+            }
+        });
+
+            document.getElementById('inputNac').addEventListener('blur', function(event) {                                                   // validacion fecha de nacimiento
+            var fechaNacimiento = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+            var errorNac = document.getElementById('errorNac');
     
+            // Verificar si la fecha tiene el formato correcto (DD/MM/AAAA)
+            var fechaPartes = fechaNacimiento.split('/');
+            if (fechaPartes.length !== 3) {
+                errorNac.style.display = 'inline';
+                return;
+            }
+    
+            var dia = parseInt(fechaPartes[0], 10);
+            var mes = parseInt(fechaPartes[1], 10);
+            var anio = parseInt(fechaPartes[2], 10);
+    
+            // Verificar si el día está entre 1 y 31
+            if (dia < 1 || dia > 31) {
+                errorNac.style.display = 'inline';
+                return;
+            }
+    
+            // Verificar si el mes está entre 1 y 12
+            if (mes < 1 || mes > 12) {
+                errorNac.style.display = 'inline';
+                return;
+            }
+    
+            // Obtener el año actual
+            var anioActual = new Date().getFullYear();
+    
+            // Verificar si el año está entre 1900 y el año actual
+            if (anio < 1900 || anio > anioActual) {
+                errorNac.style.display = 'inline';
+                return;
+            }
+    
+            // Si la fecha pasa todas las validaciones, ocultar el mensaje de error
+            errorNac.style.display = 'none';
+        });
                                                                                                                  //               VALIDACION RUT  
-    document.getElementById('inputRut').addEventListener('blur', function() {
+    <!--document.getElementById('inputRut').addEventListener('blur', function() {
         var rut = this.value.trim(); // Obtener el valor del campo de entrada y quitar espacios en blanco al principio y al final
         if (rut.length === 0) {
             alert('Por favor, ingresa tu RUT.');
@@ -43,7 +93,8 @@
         if (!rutRegex.test(rut)) {
             alert('El RUT ingresado no tiene un formato válido.');          // MENSAJE QUE SALE ARRIBA LEJOS, CUANDO ESTA INVÁLIDO XD
             return;
-        }
+        }-->
+                
         
         //Validación del dígito verificador del RUT
         //rut = rut.replace('.', '').replace('-', ''); // Eliminar puntos y guion del RUT
@@ -70,7 +121,17 @@
         //alert('El RUT ingresado es válido.');
     });
 
+           document.getElementById('inputDireccion').addEventListener('blur', function(event) {                                             // VALIDACIÓN CAMPO DIRECCION
+            var direccion = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
 
+            var direccionError = document.getElementById('direccionError');
+
+            if (direccion.length < 1) { // Si la longitud de la dirección es menor que 1
+                direccionError.style.display = 'inline'; // Mostrar el mensaje de error
+            } else {
+                direccionError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al menos un caracter
+            }
+        });
     
         document.getElementById('inputPhone').addEventListener('input', function(event) { // Se cambió 'inputphone' por 'inputPhone'        // VALIDACION TELEFONO 1
             var phoneNumber = event.target.value;
