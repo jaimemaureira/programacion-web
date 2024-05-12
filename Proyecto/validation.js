@@ -121,7 +121,17 @@
         //alert('El RUT ingresado es válido.');
     });
 
+           document.getElementById('inputDireccion').addEventListener('blur', function(event) {                                             // VALIDACIÓN CAMPO DIRECCION
+            var direccion = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
 
+            var direccionError = document.getElementById('direccionError');
+
+            if (direccion.length < 1) { // Si la longitud de la dirección es menor que 1
+                direccionError.style.display = 'inline'; // Mostrar el mensaje de error
+            } else {
+                direccionError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al menos un caracter
+            }
+        });
     
         document.getElementById('inputPhone').addEventListener('input', function(event) { // Se cambió 'inputphone' por 'inputPhone'        // VALIDACION TELEFONO 1
             var phoneNumber = event.target.value;
