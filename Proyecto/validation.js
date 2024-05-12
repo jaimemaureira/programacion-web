@@ -27,10 +27,21 @@
             }
         });
     
+        document.getElementById('inputRut').addEventListener('input', function(event) {                                                 // cambio VALIDACIÓN RUT
+            var rut = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+            var rutPattern = /^[0-9]{1,2}\.?[0-9]{3}\.?[0-9]{3}-?[0-9kK]{1}$/; // Expresión regular para validar RUT
 
+            var rutError = document.getElementById('rutError');
+
+            if (!rutPattern.test(rut)) { // Si el RUT no coincide con el patrón
+                rutError.style.display = 'inline'; // Mostrar el mensaje de error
+            } else {
+                rutError.style.display = 'none'; // Ocultar el mensaje de error si el RUT es válido
+            }
+        });
     
                                                                                                                  //               VALIDACION RUT  
-    document.getElementById('inputRut').addEventListener('blur', function() {
+    <!--document.getElementById('inputRut').addEventListener('blur', function() {
         var rut = this.value.trim(); // Obtener el valor del campo de entrada y quitar espacios en blanco al principio y al final
         if (rut.length === 0) {
             alert('Por favor, ingresa tu RUT.');
@@ -43,7 +54,8 @@
         if (!rutRegex.test(rut)) {
             alert('El RUT ingresado no tiene un formato válido.');          // MENSAJE QUE SALE ARRIBA LEJOS, CUANDO ESTA INVÁLIDO XD
             return;
-        }
+        }-->
+                
         
         //Validación del dígito verificador del RUT
         //rut = rut.replace('.', '').replace('-', ''); // Eliminar puntos y guion del RUT
