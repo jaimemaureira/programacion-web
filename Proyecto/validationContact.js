@@ -1,6 +1,6 @@
 document.getElementById('inputname2').addEventListener('input', function(event) {                         // VALIDACION CAMPO NOMBRE2, formulario contacto
     var name2 = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
-    var namePattern2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar nombres
+    var namePattern2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}$/; // Expresión regular para validar nombres
     
     var nameError2 = document.getElementById('nameError2');
     
@@ -14,7 +14,7 @@ document.getElementById('inputname2').addEventListener('input', function(event) 
                                                            
 document.getElementById('inputAp').addEventListener('input', function(event) {                         // VALIDACION CAMPO APELLIDO2, formulario contacto
     var Apellido2 = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
-    var ApPattern2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar caracteres
+    var ApPattern2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}$/; // Expresión regular para validar caracteres
     
     var apellidoError = document.getElementById('apellidoError');
     
@@ -27,7 +27,7 @@ document.getElementById('inputAp').addEventListener('input', function(event) {  
 
 document.getElementById('inputDireccion').addEventListener('input', function(event) {                         // VALIDACION CAMPO DIRECCIÓN, formulario contacto
     var inputDireccion = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
-    var direccion2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar caracteres
+    var direccion2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}$/; // Expresión regular para validar caracteres
     
     var direccionError = document.getElementById('direccionError');
     
@@ -40,7 +40,7 @@ document.getElementById('inputDireccion').addEventListener('input', function(eve
 
 document.getElementById('inputCuidad').addEventListener('input', function(event) {                         // VALIDACION CAMPO CIUDAD, formulario contacto
     var inputCuidad = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
-    var ciudad2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar caracteres
+    var ciudad2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}$/; // Expresión regular para validar caracteres
     
     var ciudadError = document.getElementById('ciudadError');
     
@@ -53,7 +53,7 @@ document.getElementById('inputCuidad').addEventListener('input', function(event)
 
 document.getElementById('inputComuna').addEventListener('input', function(event) {                         // VALIDACION CAMPO COMUNA, formulario contacto
     var inputComuna = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
-    var comuna2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar caracteres letras
+    var comuna2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}$/; // Expresión regular para validar caracteres letras
     
     var comunaError = document.getElementById('comunaError');
     
@@ -102,7 +102,7 @@ document.getElementById('inputMail1').addEventListener('blur', function(event) {
     }
 });
 
-document.getElementById('comentarios').addEventListener('input', function(event) {                                     //   VALIDACIÓN MAIL
+document.getElementById('comentarios').addEventListener('input', function(event) {                                     //   VALIDACIÓN Comentarios
     var comentarios = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
     var comentariosError = document.getElementById('comentariosError');
 
