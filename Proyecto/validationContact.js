@@ -50,3 +50,18 @@ document.getElementById('inputCuidad').addEventListener('input', function(event)
         ciudadError.style.display = 'none'; // Ocultar el mensaje de error si la CIUDAD es válido
     }
 });
+
+document.getElementById('inputComuna').addEventListener('input', function(event) {                         // VALIDACION CAMPO COMUNA, formulario contacto
+    var inputComuna = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+    var comuna2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar caracteres letras
+    
+    var comunaError = document.getElementById('comunaError');
+    
+    if (!comuna2.test(inputComuna)) { // Si la comuna no coincide con el patrón
+        comunaError.style.display = 'inline'; // Mostrar el mensaje de error
+    } else {
+        comunaError.style.display = 'none'; // Ocultar el mensaje de error si la comuna es válido
+    }
+});
+
+
