@@ -64,4 +64,26 @@ document.getElementById('inputComuna').addEventListener('input', function(event)
     }
 });
 
+document.getElementById('inputPhone1').addEventListener('input', function(event) {                                        // VALIDACION TELEFONO 1, FORM. CONTACT
+    var inputPhone1 = event.target.value;
+    var phonePattern = /^\+569[0-9]{8}$/; // Expresión regular para el formato del número de teléfono
+    var telefonoError = document.getElementById('telefonoError');
 
+    if (!phonePattern.test(inputPhone1)) { // Si el número de teléfono no coincide con el patrón
+        telefonoError.style.display = 'inline'; // Mostrar el mensaje de error
+    } else {
+        telefonoError.style.display = 'none'; // Ocultar el mensaje de error si el número es válido
+    }
+}); 
+
+document.getElementById('inputPhone2').addEventListener('input', function(event) { // Se cambió 'inputphone' por 'inputPhone'        // VALIDACION TELEFONO 2, FORM. CONTACT
+    var inputPhone2 = event.target.value;
+    var phonePattern = /^\+569[0-9]{8}$/; // Expresión regular para el formato del número de teléfono
+    var telefono2Error = document.getElementById('telefono2Error');
+
+    if (!phonePattern.test(inputPhone2)) { // Si el número de teléfono no coincide con el patrón
+        telefono2Error.style.display = 'inline'; // Mostrar el mensaje de error
+    } else {
+        telefono2Error.style.display = 'none'; // Ocultar el mensaje de error si el número es válido
+    }
+});
