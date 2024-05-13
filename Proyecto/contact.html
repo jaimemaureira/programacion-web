@@ -79,10 +79,13 @@
 
                 <!--creacion box NOMBRE-->
                 <div class="col-5" style="margin-top: 10px; margin-left: 25px; margin-right: 15px;">
-                    <!--creamos una nueva clase llamada col la cual determina mediante su valor la cantidad de columnas que se utelizaran-->
-                    <label for="inputname" class="margin-top"
+                    <!--creamos una nueva clase llamada col la cual determina mediante su valor la cantidad de columnas que se utelizaran-->     <!--cambio del nombre id-->
+                    <label for="inputname2" class="margin-top"
                         class="form-label">Nombres</label><!--con label ponemos el nombre de etiqueta para la barra de texto-->
-                    <input type="text" class="form-control" id="inputname" placeholder="Nombres" style="font-size: 10px required">
+                    <input type="text" class="form-control" id="inputname2" placeholder="Nombres" style="font-size: 10px" required>
+                    <span id="nameError2" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un Nombre válido.
+                    </span>
                     <!--con el input se crea un cuadro para ingresar texto-->
                 </div>
 
@@ -91,6 +94,9 @@
                 <div class="col-5">
                     <label for="inputAp" class="margin-top" class="form-label">Apellidos</label>
                     <input type="text" class="form-control" id="inputAp" placeholder="Apellidos" style="font-size: 10px" required>
+                    <span id="apellidoError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un Apellido válido.
+                    </span>
                 </div>
 
                 <!--creacion box Direccion-->
@@ -98,37 +104,55 @@
                     <label for="inputDireccion" class="margin-top" class="form-label">Direccion</label>
                     <input type="text" class="form-control" id="inputDireccion" placeholder="Direccion"
                         style="font-size: 10px" required>
+                    <span id="direccionError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese una Dirección válida.
+                    </span>
                 </div>
 
                 <!--creacion box Cuidad-->
                 <div class="col-5" style="margin-top: 10px; margin-left: 25px; margin-right: 15px;">
                     <label for="inputCuidad" class="margin-top" class="form-label">Ciudad</label>
                     <input type="text" class="form-control" id="inputCuidad" placeholder="Ciudad" style="font-size: 10px" required>
+                    <span id="ciudadError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese una Ciudad válida.
+                    </span>
                 </div>
 
                 <!--creacion box Comuna-->
                 <div class="col-5">
                     <label for="inputComuna" class="margin-top" class="form-label">Comuna</label>
-                    <input type="text" class="form-control" id="inputDireccion" placeholder="Comuna"
+                    <input type="text" class="form-control" id="inputComuna" placeholder="Comuna"
                         style="font-size: 10px" required>
+                    <span id="comunaError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese una Comuna válida.
+                    </span>
                 </div>
 
                 <!--creacion box Telefono-->
                 <div class="col-5" style="margin-top: 10px; margin-left: 25px; margin-right: 15px;">
-                    <label for="inputPhone" class="margin-top" class="form-label">Teléfono</label>
-                    <input type="text" class="form-control" id="inputPhone" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
+                    <label for="inputPhone1" class="margin-top" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="inputPhone1" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
+                    <span id="telefonoError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un Teléfono válido.
+                    </span>
                 </div>
 
                 <!--creacion box Teléfono2-->
                 <div class="col-5">
-                    <label for="inputphone2" class="margin-top" class="form-label">Teléfono 2</label>
-                    <input type="text" class="form-control" id="inputphone2" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
+                    <label for="inputPhone2" class="margin-top" class="form-label">Teléfono 2</label>
+                    <input type="text" class="form-control" id="inputPhone2" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
+                    <span id="telefono2Error" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un Teléfono válido.
+                    </span>
                 </div>
 
                 <!--creacion caja mail-->
                 <div class="col-6" style="margin-top: 10px; margin-left: 25px; margin-right: 15px;">
                     <label for="inputText" class="margin-top" class="form-label">Mail</label>
-                    <input type="email" class="form-control" id="inputMail" placeholder="Mail" style="font-size: 10px" required>
+                    <input type="email" class="form-control" id="inputMail1" placeholder="Mail" style="font-size: 10px" required>
+                    <span id="mail1Error" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un Mail válido.
+                    </span>
                 </div>
 
                 <!--creacion de comentarios-->
@@ -136,6 +160,9 @@
 
                     <label for="comentarios" class="form-label">Comentarios</label>
                     <textarea class="form-control" style="height: 150px" id="comentarios" rows="3" placeholder="Dejanos tu cometario"></textarea>
+                    <span id="comentariosError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un Comentario.
+                    </span>
                     
                 </div>
 
@@ -145,16 +172,16 @@
 
                     <!--<button class="btn-enviar" type="submit">Enviar</button>-->
                     <div class="container mt-5">
-                      <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Para mandar el comentario" data-bs-content="Presione enviar">Enviar</button>
+                      <button type="button" class="btn btn-primary" >Enviar</button>
                     </div>
                     
-                    <script>
+                    <!--<script>
                       // Activar los popovers al cargar la página
                       var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
                       var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
                         return new bootstrap.Popover(popoverTriggerEl)
                       })
-                    </script>
+                    </script>-->
                     </button>
 
                 </div>
@@ -252,7 +279,8 @@
             
 
         </div>
-
+        
     </div>
+    <script src="validationContact.js"></script>
 </body>
-
+</html>

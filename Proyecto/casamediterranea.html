@@ -22,7 +22,7 @@
 
     <body class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-md">
             <div class="container-fluid">
                 <img src="iconos/apreton-de-manos.png" style="height: 100px;">
                 <a class="navbar-brand" style="margin-left: 20px;"
@@ -49,17 +49,17 @@
 
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="arr_ventas.html">Venta y Arriendos</a>
+                                href="arr_ventas.html">Venta y Arriendo</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="contact.html">Contactanos</a>
+                                href="contact.html">Contáctanos</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="registro.html">Registrate</a>
+                                href="registro.html">Regístrate</a>
                         </li>
 
                     </ul>
@@ -70,111 +70,105 @@
 
         <!--formato para las propiedades-->
 
-        <div class="container-fluid p-5" style="display: flex;">
-            <!--CARRUSEL DE FOTOS PROPIEDADES-->
-            <div class="container " style="width: 1000px;">
-                <div id="carouselExampleInterval" class="carousel slide"
-                    data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active"
-                            data-bs-interval="5000">
-                            <img
-                                src="https://img.freepik.com/foto-gratis/villa-lujo-piscina-espectacular-diseno-contemporaneo-arte-digital-bienes-raices-hogar-casa-propiedad-ge_1258-150749.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1712620800&semt=sph"
-                                class="d-block" alt="...">
+        <div class="container-fluid p-2" >
+            <div  class="imagenInfo">
+                <!--CARRUSEL DE FOTOS PROPIEDADES-->
+                <div class=" carruselFotosPropie col-7">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"
+                                data-bs-interval="5000">
+                                <img
+                                    src="https://img.freepik.com/foto-gratis/villa-lujo-piscina-espectacular-diseno-contemporaneo-arte-digital-bienes-raices-hogar-casa-propiedad-ge_1258-150749.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1712620800&semt=sph"
+                                    class="d-block" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img
+                                    src="https://content.elmueble.com/medio/2023/03/06/dormitorio-con-suelo-de-madera-con-vetas_36731653_00560115_230306115707_900x900.jpg"
+                                    class="d-block" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img
+                                    src="https://i.pinimg.com/originals/c3/05/09/c3050953d7cafc547d5776abfab0f2a8.jpg"
+                                    class="d-block" alt="...">
+                            </div>
                         </div>
-                        <div class="carousel-item" data-bs-interval="5000">
-                            <img
-                                src="https://content.elmueble.com/medio/2023/03/06/dormitorio-con-suelo-de-madera-con-vetas_36731653_00560115_230306115707_900x900.jpg"
-                                class="d-block" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="https://i.pinimg.com/originals/c3/05/09/c3050953d7cafc547d5776abfab0f2a8.jpg"
-                                class="d-block" alt="...">
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"
+                                aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"
+                                aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="container-fluid"> 
+                    <div class=" infoPropiedades">
+                        <!--CONTAINER CON DATOS DE LAS CASAS-->
+                        <h5>Casa estilo mediterráneo ubicada en Altos de
+                            Curauma, Valparaíso</h5>
+                        <br>
+                        
+                        
+                            <div class="cuadroTexto">
+                                <div class="info1 col-6">
+                                    <div class="">
+                                        <li>Metros cuadrados:&emsp;&emsp;&emsp;1500</li>
+                                        <li>Metros construidos:&emsp;&ensp;&emsp;600</li>
+                                        <li>Cantidad habitaciones: &ensp;&nbsp; 6</li>
+                                        <li>Cantidad de baños:&emsp;&emsp;&ensp;&nbsp;4</li>
+                                        <li>Terraza:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;si</li>
+                                        <li>Tipo cocina:&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;americana</li>
+                                        <li>Estacionamiento:&emsp;&emsp;&emsp;&ensp;4</li>
+                                        <li>Lavanderia:&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;si</li>
+                                        <li>Piscina:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;si</li>
+                                        <li>Áreas verdes:&emsp;&emsp;&emsp;&emsp;&emsp;si</li>
+                                    </div>    
+
+                                    
+                                </div>
+                                
+                            </div>
+                        
+                        <div class="descripcionCasa">
+                            <h5 class="mt-5">Mas informacion:</h5>        
+                                <p>Casa muy bien ubicada a pasos
+                                de la ruta 68, sector de
+                                alta plusvalía.
+                                Cuenta con piscina temperada y bodega de gran
+                                tamaño.</p>
+                        
+                            <h4>Valor: 8.000 UF</h4>
+                        </div>        
+                        
+                        <div class="botonContacto col-12">
+                            <a class="btn btn-primary" href="contact.html"role="button">Contactar</a>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button"
-                        data-bs-target="#carouselExampleInterval"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"
-                            aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button"
-                        data-bs-target="#carouselExampleInterval"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon"
-                            aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                    
+                
+                        
+                
+                
             </div>
-
-            <!--CONTAINER CON DATOS DE LAS CASAS-->
-            <div class="container p-5 "
-                style="width: 700px; margin-left: -100px;">
-                <h5 class="text">Casa estilo mediterraneo ubicada en Altos de
-                    Curauma, Valparaiso</h5>
-                <hr>
-                <br>
-                <div class="container-fluid" style="display: flex;">
-                    <div class="col-10">
-
-                        <ul>
-
-                            <li>Metros cuadrados:</li>
-                            <li>Metros construidos:</li>
-                            <li>Cantidad habitaciones:</li>
-                            <li>Cantidad de baños:</li>
-                            <li>Terraza:</li>
-                            <li>Tipo cocina:</li>
-                            <li>Estacionamiento:</li>
-                            <li>Lavanderia</li>
-                            <li>piscina</li>
-                            <li>Areas verdes</li>
-                            <li>Otras descripciones:</li>
-
-                        </ul>
-                    </div>
-                    <div class>
-                        <ul>
-                            1500 <br>
-                            600 <br>
-                            6 <br>
-                            4 <br>
-                            si <br>
-                            americana <br>
-                            4 <br>
-                            si <br>
-                            si <br>
-                            si <br>
-                        </ul>
-                    </div>
-                </div>
-                <div class="descripcion">
-                    <p style="margin-left: 30px;">Casa muy bien ubicada a pasos
-                        de la ruta 68, sector de
-                        alta plusvalia. <br>
-                        Cuenta con piscina temperada y bodega de gran
-                        tamaño.</p>
-                </div>
-                <div class="p-4">
-
-                    <h4>Valor de: 8.000 UF</h4>
-
-                </div>
-                <div class="button-contactar p-4">
-                    <a class="btn btn-primary" href="contact.html"
-                        role="button">Contactar</a>
-
-                </div>
-
-            </div>
-        </div>
-
-        <!--mapa-->
-        <h3 style="text-align: center ">Ubicacion de la propiedad</h3>
-        <div id="map" class=" container"></div>
+        </div> 
+             
+            
+        </div>    
+         <!--mapa-->
+         <div class="container-fluid col-lg-12">
+            <h3 style="text-align: center ">Ubicación de la propiedad</h3>
+            <div id="map" class=" container-fluid"></div>
+         </div>
+        
         
     <!-- Footer -->
     <div class="container-fluid">
@@ -184,15 +178,15 @@
             <div class="col-xs-12 col-md-6 col-lg-3">
 
                 <p class="h3">Adhogar</p>
-                <p class="h8">Las imagenes contenidas en este <br>
-                    material son montajes fotograficos <br> y estas son
+                <p class="h8">Las imágenes contenidas en este <br>
+                    material son montajes fotográficos <br> y estas son
                     solo ilustrativas, <br> no constituyendo una
-                    representacion <br> exacta de la realidad.</p>
+                    representación <br> exacta de la realidad.</p>
 
             </div>
             <div class="col-xs-12 col-md-6 col-lg-3">
 
-                <p class="h5">productos</p>
+                <p class="h5">Productos</p>
                 <div class="mb-2">
                     <a class="text-white text-decoration-none"
                         href>ventas</a>
@@ -207,7 +201,7 @@
                 </div>
                 <div class="mb-2">
                     <a class="text-white text-decoration-none"
-                        href>Administracion</a>
+                        href>Administración</a>
                 </div>
 
             </div>
@@ -270,3 +264,4 @@
         <script src="maps.js"></script>  
         
     </body>
+</html>

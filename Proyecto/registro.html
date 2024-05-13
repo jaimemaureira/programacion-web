@@ -104,7 +104,7 @@
                 <div class="col-5" style="margin-top: 15px; margin-left: 25px;">
                     <label for="inputRut" class="margin-top" class="form-label">RUT</label>
                     <input type="text" class="form-control" id="inputRut" placeholder="Ejemplo : 01.222.333-0" style="font-size: 10px" required>
-                    <span id="Rut" class="error-message" style="color: red; display: none;">
+                    <span id="rutError" class="error-message" style="color: red; display: none;">
                         Por favor, ingrese un número de Run válido en el formato 01.222.333-0
                     </span>
                 </div>
@@ -129,17 +129,23 @@
                         </span>
                 </div>
 
-                <!--creacion box Cuidad-->
+                <!--creacion box Ciudad-->
                 <div class="col-5" style="margin-top: 15px; margin-left: 25px;">
-                    <label for="inputCuidad" class="margin-top" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCuidad" placeholder="Ciudad" style="font-size: 10px" required>
+                    <label for="inputCiudad" class="margin-top" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad" style="font-size: 10px" required>
+                    <span id="ciudadError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese una Ciudad válida.
+                    </span>
                 </div>
 
-                <!--creacion box Comuna-->
+                <!--creacion box Comuna-->                                                              
                 <div class="col-5" style="margin-top: 15px;">
                     <label for="inputComuna" class="margin-top" class="form-label">Comuna</label>
-                    <input type="text" class="form-control" id="inputDireccion" placeholder="Comuna"
+                    <input type="text" class="form-control" id="inputComuna" placeholder="Comuna"
                         style="font-size: 10px" required>
+                    <span id="comunaError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese una Comuna válida.
+                    </span>
                 </div>
 
                 <!-- creacion box Telefono -->
@@ -164,8 +170,11 @@
                 <div class="col-10" style="margin-top: 15px; margin-left: 25px;">
                     <label for="inputText" class="margin-top" class="form-label">Mail</label>
                     <input type="email" class="form-control" id="inputMail" placeholder="Mail" style="font-size: 10px" required>
+                    <span id="mailError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un correo electrónico válido.
                 </div>
 
+                <!--Botones check-->
                 <div class="principalCheck" style="display: flex;">
                     <div class="check1">
                         <div style="margin-left: 25px; margin-top: 15px;">

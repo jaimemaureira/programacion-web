@@ -1,6 +1,7 @@
 .navbar{
 
     background-image: url(imagenes/color\ fondo\ form.jpg); 
+    
 }
 
 
@@ -11,7 +12,9 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
+.navbar .container-fluid{
+    margin-left: 10px;
+}
 
 
 
@@ -82,18 +85,19 @@
     
 }
 
-.cajacards{
-
-    display: flex; 
-       
+.card {
+    margin-top: 0%;
+    margin-left: 20px;
+    margin-right: 30px;
+    
+    margin-bottom: 20px;
+  
 }
 
-.card {
+.cajaCards{
 
-    width: 18rem;
-    margin-right: 30px;
-    margin-bottom: 20px;
-    align-items: center;
+    display: flex;
+    justify-content: center;
     
 }
 
@@ -163,25 +167,48 @@
 
 .d-block{
 
-    height: 700px;
-    width: 1500px;
+    height: 600px;
+    width: 100%;
+    
 }
 
 .login{
-
-    padding: 5px;
-    margin-left: 30px;
-    width: 1500px;
-    border-radius: 15px;
-    background-color: rgba(8, 1, 1, 0.8); 
+    
+    text-align: center;
+    color: white;
+    background-color: rgba(8, 1, 1, 0.7);
+    width: 400px; 
 }
 
 .login i {
 
-    font-size: 50px;
+    font-size: 80px;
     color: white;
-    margin-left: 45%;
+    text-align: center;
 }
+
+.login label{
+
+    align-items: center;
+    margin-top: 40px;
+    
+}
+
+.login input {
+
+    margin-left: 50px;
+    width: 70%;
+    
+}
+
+.login button{
+    
+    margin-top: 70px;
+    ali
+    
+}
+
+
 
 /* map*/
 
@@ -190,9 +217,109 @@
     height: 400px;
     width: 100%;
     margin-bottom: 20px;
+ 
+}
+
+
+.carruselIndex{
+    width: 100%;
+    background-color: blue;
     
+}
+.carousel-item {
+
+    justify-content: center;
+    align-items: center;
+    height:600px;
+    
+}
+
+.imagenInfo{
+
+display: flex;
+    height: 600px;
+    margin-bottom: 10px;
+  
+}
+
+.infoPropiedades{
+    
+    padding: 15px;
+}
+
+.botonContacto {
+    margin-top: 35px;
+   
+}
+
+.cuadroTexto{
+
+    display: flex;
+    
+    text-align: justify;
+     
+}
+
+.descripcionCasa h5{
+    text-align: left;
+}
+
+.descripcionCasa h4{
+    text-align: left;
+    font-size: 35px;
+    color: green;
+}
+
+.descripcionCasa p{
+    text-align: justify;
+}
+
+.info1{
+    text-align: left;
+    display: flex;
+    
+}
+
+.info2{
+    text-align: left;
+}
 
 
+@media screen and ( max-width: 1503px){
+    .imagenInfo{
+        
+        display: contents ;
+        
+        
+        
+    }
+
+}@media screen and ( max-width: 1503px){
+    .carruselFotosPropie{
+        
+        width: 80%;
+        margin-left: 10%;
+        
+    }
+}
+
+}@media screen and ( max-width: 1503px){
+    .infoPropiedades{
+        
+        width: 80%;
+        text-align: center;
+        
+    }
+}
+
+@media  screen and (max-width: 1503px){
+    .info1{
+        
+        display: block;
+        columns: 1;
+        text-align: left;
+        
+    }
 }
 
 /* player*/
@@ -206,5 +333,6 @@
 
 
 }
+
 
 
