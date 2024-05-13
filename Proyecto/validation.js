@@ -27,7 +27,7 @@
             }
         });
     
-        document.getElementById('inputRut').addEventListener('input', function(event) {                                                 // cambio VALIDACIÓN RUT
+        document.getElementById('inputRut').addEventListener('input', function(event) {                                                 // cambio VALIDACIÓN RUT ******************
             var rut = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
             var rutPattern = /^[0-9]{1,2}\.?[0-9]{3}\.?[0-9]{3}-?[0-9kK]{1}$/; // Expresión regular para validar RUT
 
@@ -80,21 +80,7 @@
             errorNac.style.display = 'none';
         });
                                                                                                                  //               VALIDACION RUT  
-    <!--document.getElementById('inputRut').addEventListener('blur', function() {
-        var rut = this.value.trim(); // Obtener el valor del campo de entrada y quitar espacios en blanco al principio y al final
-        if (rut.length === 0) {
-            alert('Por favor, ingresa tu RUT.');
-            return;
-        }
-        
-        // Expresión regular para validar el formato del RUT (solo números y guion)
-        var rutRegex = /^\d{1,2}\.\d{3}\.\d{3}-[0-9kK]{1}$/;
-        
-        if (!rutRegex.test(rut)) {
-            alert('El RUT ingresado no tiene un formato válido.');          // MENSAJE QUE SALE ARRIBA LEJOS, CUANDO ESTA INVÁLIDO XD
-            return;
-        }-->
-                
+
         
         //Validación del dígito verificador del RUT
         //rut = rut.replace('.', '').replace('-', ''); // Eliminar puntos y guion del RUT
@@ -119,19 +105,31 @@
         
         // Si llegamos hasta aquí, el RUT es válido
         //alert('El RUT ingresado es válido.');
-    });
+    //});
 
            document.getElementById('inputDireccion').addEventListener('blur', function(event) {                                             // VALIDACIÓN CAMPO DIRECCION
             var direccion = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
 
             var direccionError = document.getElementById('direccionError');
 
-            if (direccion.length < 1) { // Si la longitud de la dirección es menor que 1
+            if (direccion.length < 3) { // Si la longitud de la dirección es menor que 3
                 direccionError.style.display = 'inline'; // Mostrar el mensaje de error
             } else {
-                direccionError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al menos un caracter
+                direccionError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al menos 3 caracteres
             }
         });
+
+        document.getElementById('inputCiudad').addEventListener('blur', function(event) {                                             // VALIDACIÓN CAMPO CIUDAD
+        var ciudad = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+
+        var ciudadError = document.getElementById('ciudadError');
+
+        if (ciudad.length < 3) { // Si la longitud de la dirección es menor que 3
+        ciudadError.style.display = 'inline'; // Mostrar el mensaje de error
+        } else {
+        ciudadError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al 3 un caracteres
+    }
+});
     
         document.getElementById('inputPhone').addEventListener('input', function(event) { // Se cambió 'inputphone' por 'inputPhone'        // VALIDACION TELEFONO 1
             var phoneNumber = event.target.value;
