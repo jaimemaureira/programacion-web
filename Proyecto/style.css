@@ -85,18 +85,19 @@
     
 }
 
-.cajacards{
-
-    display: flex; 
-       
+.card {
+    margin-top: 0%;
+    margin-left: 20px;
+    margin-right: 30px;
+    
+    margin-bottom: 20px;
+  
 }
 
-.card {
+.cajaCards{
 
-    width: 18rem;
-    margin-right: 30px;
-    margin-bottom: 20px;
-    align-items: center;
+    display: flex;
+    justify-content: center;
     
 }
 
