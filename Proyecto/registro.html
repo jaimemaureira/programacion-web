@@ -52,7 +52,7 @@
         
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="contact.html">Contactanos</a>
+                                href="contact.html">Contáctanos</a>
                         </li>
         
                         <li class="nav-item">
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </nav>
-   
+
     <!--Formulario-->
     
     <div class="titulo-1">
@@ -74,8 +74,8 @@
     </div>
     <div class="container col-6">
         
-        <form action="" class="row " style="margin-top: 20px" action=>
-           
+        <form action="" class="row " style="margin-top: 20px" action="">
+        
             <!--creacion contenido del formulario de contacto-->
 
             <!--creacion box NOMBRE-->
@@ -85,25 +85,38 @@
                     <label for="inputname" class="margin-top" class="form-label">Nombres</label><!--con label ponemos el nombre de etiqueta para la barra de texto-->
                     <input type="text" class="form-control" id="inputname" placeholder="Nombres" style="font-size: 10px" required>
                     <!--con el input se crea un cuadro para ingresar texto-->
+                    <span id="nameError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un Nombre válido.
+                    </span>
+
                 </div>
                 <!--creacion box APELLIDO-->
                 <div class="col-5" style="margin-top: 25px;">
                     <label for="inputAp" class="margin-top" class="form-label">Apellidos</label>
                     <input type="text" class="form-control" id="inputAp" placeholder="Apellidos" style="font-size: 10px" required>
+                    <span id="apellError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un Apellido válido.
+                    </span>
                 </div>
 
                 <!--RUT-->
 
                 <div class="col-5" style="margin-top: 15px; margin-left: 25px;">
                     <label for="inputRut" class="margin-top" class="form-label">RUT</label>
-                    <input type="text" class="form-control" id="inputRut" placeholder="RUT" style="font-size: 10px" required>
+                    <input type="text" class="form-control" id="inputRut" placeholder="Ejemplo : 01.222.333-0" style="font-size: 10px" required>
+                    <span id="Rut" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un número de Run válido en el formato 01.222.333-0
+                    </span>
                 </div>
 
                 <!--F. NACIMIENTO-->
 
                 <div class="col-5" style="margin-top: 15px;">
-                    <label for="inputNac" class="margin-top" class="form-label">Fecha de Nacimiento</label>
-                    <input type="text" class="form-control" id="inputNac" placeholder="fecha de nacimiento" style="font-size: 10px" required>
+                    <label for="inputNac" class="margin-top" class="form-label">Fecha de Nacimiento (DD/MM/AAAA)</label>
+                    <input type="text" class="form-control" id="inputNac" placeholder="Fecha de nacimiento (DD/MM/AAAA)" style="font-size: 10px" required pattern="\d{2}/\d{2}/\d{4}">
+                    <span id="errorNac" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese una Fecha de nacimiento válida en el formato DD/MM/AAAA
+                    </span>
                 </div>
 
                 <!--creacion box Direccion-->
@@ -111,12 +124,18 @@
                     <label for="inputDireccion" class="margin-top" class="form-label">Direccion</label>
                     <input type="text" class="form-control" id="inputDireccion" placeholder="Direccion"
                         style="font-size: 10px" required>
+                    <span id="direccionError" class="error-message" style="color: red; display: none;">
+                            Por favor, ingrese una Dirección válida.
+                        </span>
                 </div>
-
-                <!--creacion box Cuidad-->
+ 
+                <!--creacion box Ciudad-->
                 <div class="col-5" style="margin-top: 15px; margin-left: 25px;">
-                    <label for="inputCuidad" class="margin-top" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCuidad" placeholder="Ciudad" style="font-size: 10px" required>
+                    <label for="inputCiudad" class="margin-top" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad" style="font-size: 10px" required>
+                    <span id="ciudadError" class="error-message" style="color: red; display: none;">
+                            Por favor, ingrese una Ciudad válida.
+                    </span>
                 </div>
 
                 <!--creacion box Comuna-->
@@ -124,24 +143,36 @@
                     <label for="inputComuna" class="margin-top" class="form-label">Comuna</label>
                     <input type="text" class="form-control" id="inputDireccion" placeholder="Comuna"
                         style="font-size: 10px" required>
+                    <span id="comunaError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese una Comuna válida.
+                    </span>
                 </div>
 
-                <!--creacion box Telefono-->
+                <!-- creacion box Telefono -->
                 <div class="col-5" style="margin-top: 15px; margin-left: 25px;">
                     <label for="inputPhone" class="margin-top" class="form-label">Teléfono</label>
-                    <input type="text" class="form-control" id="inputPhone" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
+                    <input type="text" class="form-control" id="inputPhone" pattern="\+569 [0-9]{8}" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
+                    <span id="phoneError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un número de teléfono válido en el formato +569xxxxxxxx
+                    </span>
                 </div>
 
                 <!--creacion box Teléfono2-->
                 <div class="col-5" style="margin-top: 15px;">
                     <label for="inputphone2" class="margin-top" class="form-label">Teléfono 2</label>
-                    <input type="text" class="form-control" id="inputphone2" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
+                    <input type="text" class="form-control" id="inputphone2"  pattern="\+569 [0-9]{8}" placeholder="+569xxxxxxxx" style="font-size: 10px" required>
+                    <span id="phone2Error" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un número de teléfono válido en el formato +569xxxxxxxx
+                    </span>
                 </div>
 
                 <!--creacion caja mail-->
                 <div class="col-10" style="margin-top: 15px; margin-left: 25px;">
                     <label for="inputText" class="margin-top" class="form-label">Mail</label>
                     <input type="email" class="form-control" id="inputMail" placeholder="Mail" style="font-size: 10px" required>
+                    <span id="mailError" class="error-message" style="color: red; display: none;">
+                        Por favor, ingrese un correo electrónico válido.
+                    </span>
                 </div>
 
                 <div class="principalCheck" style="display: flex;">
@@ -176,24 +207,24 @@
                         </div>
                     </div>
                 </div>
-             
+
                 <!--creacion boton enviar-->
 
                 <div>
-
-                    <!--<button class="btn-enviar" type="submit">Enviar</button>-->
+                    <button class="btn-enviarReg" type="submit">Enviar</button>
+                    <!--<button class="btn-enviar" type="submit">Enviar</button>
                     <div class="container mt-5">
-                      <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Para mandar el comentario" data-bs-content="Presione enviar">Enviar</button>
-                    </div>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                    </div>-->
                     
-                    <script>
+                    <!--<script>
                       // Activar los popovers al cargar la página
-                      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-                      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+                    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
                         return new bootstrap.Popover(popoverTriggerEl)
-                      })
+                    })
                     </script>
-                    </button>
+                    </button>-->
 
                 </div>
         </form>
@@ -293,8 +324,9 @@
         </div>
 
     </div>
+
         
-    
+    <script src="validation.js"></script>
 </body>
 
 </html>
