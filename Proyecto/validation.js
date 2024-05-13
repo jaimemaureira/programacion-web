@@ -123,14 +123,29 @@
         var ciudad = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
 
         var ciudadError = document.getElementById('ciudadError');
+        var regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar caracteres alfabéticos
 
-        if (ciudad.length < 3) { // Si la longitud de la dirección es menor que 3
+        if (ciudad.length < 3 || !regex.test(ciudad)) { // Si la longitud de la ciudad es menor que 3
         ciudadError.style.display = 'inline'; // Mostrar el mensaje de error
         } else {
-        ciudadError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al 3 un caracteres
+        ciudadError.style.display = 'none'; // Ocultar el mensaje de error si la Ciudad tiene al 3 un caracteres
     }
 });
-    
+
+        document.getElementById('inputComuna').addEventListener('blur', function(event) {                                             // VALIDACIÓN CAMPO COMUNA
+    var comuna = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+
+    var comunaError = document.getElementById('comunaError');
+    var regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar caracteres alfabéticos
+
+
+    if (comuna.length < 3 || !regex.test(comuna)) { // Si la longitud de la comuna es menor que 3 o caracteres no permitidos
+    comunaError.style.display = 'inline'; // Mostrar el mensaje de error
+    } else {
+    comunaError.style.display = 'none'; // Ocultar el mensaje de error si la comuna tiene al 3 un caracteres
+}
+});
+
         document.getElementById('inputPhone').addEventListener('input', function(event) { // Se cambió 'inputphone' por 'inputPhone'        // VALIDACION TELEFONO 1
             var phoneNumber = event.target.value;
             var phonePattern = /^\+569[0-9]{8}$/; // Expresión regular para el formato del número de teléfono
