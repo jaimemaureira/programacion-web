@@ -13,7 +13,8 @@
 
         // Agrega un marcador en la ubicación especificada
         var marker = new google.maps.Marker({
-            position: LatLng, map: map,
+            position: LatLng, 
+            map: map,
             title: 'Mi ubicación'
         });
     }  
@@ -32,7 +33,48 @@
 
        // Agrega un marcador en la ubicación especificada
        var marker = new google.maps.Marker({
-           position: LatLng, map: map,
+           position: LatLng, 
+           map: map,
            title: 'Mi ubicación'
        });
    }
+
+   //MAPA CASA ESTILO EUROPEA
+
+   function initMap3() {
+    // Coordenadas para centrar el mapa
+    var LatLng = {lat: -33.0291516, lng: -71.5669333};
+
+    // Crea un nuevo mapa en el elemento div con el id 'map'
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: LatLng,
+        zoom: 16 // Zoom predeterminado para la imagen del mapa
+    });
+
+    // Agrega un marcador en la ubicación especificada
+    var marker = new google.maps.Marker({
+        position: LatLng, 
+        map: map,
+        title: 'Mi ubicación'
+    });
+}
+
+   //MAPA CASA ESTILO OCCIDENTAL
+
+   function initMap4() {
+    // Coordenadas para centrar el mapa
+    var LatLng = {lat: -32.9787664, lng: -71.5435179};
+
+    // Crea un nuevo mapa en el elemento div con el id 'map'
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: LatLng,
+        zoom: 16 // Zoom predeterminado para la imagen del mapa
+    });
+
+    // Agrega un marcador en la ubicación especificada
+    var marker = new google.maps.Marker({
+        position: LatLng, 
+        map: map,
+        title: 'Mi ubicación'
+    });
+}
