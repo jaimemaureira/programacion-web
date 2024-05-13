@@ -115,9 +115,21 @@
             if (direccion.length < 3) { // Si la longitud de la dirección es menor que 3
                 direccionError.style.display = 'inline'; // Mostrar el mensaje de error
             } else {
-                direccionError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al menos un caracter
+                direccionError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al menos 3 caracteres
             }
         });
+
+        document.getElementById('inputCiudad').addEventListener('blur', function(event) {                                             // VALIDACIÓN CAMPO CIUDAD
+        var ciudad = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+
+        var ciudadError = document.getElementById('ciudadError');
+
+        if (ciudad.length < 3) { // Si la longitud de la dirección es menor que 3
+        ciudadError.style.display = 'inline'; // Mostrar el mensaje de error
+        } else {
+        ciudadError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al 3 un caracteres
+    }
+});
     
         document.getElementById('inputPhone').addEventListener('input', function(event) { // Se cambió 'inputphone' por 'inputPhone'        // VALIDACION TELEFONO 1
             var phoneNumber = event.target.value;
