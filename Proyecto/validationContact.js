@@ -11,4 +11,18 @@ document.getElementById('inputname2').addEventListener('input', function(event) 
     }
 });
 
+                                                           
+document.getElementById('inputAp').addEventListener('input', function(event) {                         // VALIDACION CAMPO APELLIDO2, formulario contacto
+    var Apellido2 = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+    var ApPattern2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar nombres
+    
+    var apellidoError = document.getElementById('apellidoError');
+    
+    if (!ApPattern2.test(Apellido2)) { // Si el nombre no coincide con el patrón
+        apellidoError.style.display = 'inline'; // Mostrar el mensaje de error
+    } else {
+        apellidoError.style.display = 'none'; // Ocultar el mensaje de error si el nombre es válido
+    }
+});
+
 
