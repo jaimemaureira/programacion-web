@@ -101,3 +101,18 @@ document.getElementById('inputMail1').addEventListener('blur', function(event) {
         mail1Error.style.display = 'none'; // Ocultar el mensaje de error si el correo electrónico es válido
     }
 });
+
+document.getElementById('comentarios').addEventListener('input', function(event) {                                     //   VALIDACIÓN MAIL
+    var comentarios = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+    var comentariosError = document.getElementById('comentariosError');
+
+    // Validación adicional con expresión regular
+    var regex = /[a-zA-Z]{3,}/; // Expresión regular para validar al menos 3 letras
+
+    if (!regex.test(comentarios)) { // Si los comentarios no cumplen con el patrón
+        comentariosError.style.display = 'inline'; // Mostrar el mensaje de error
+    } else {
+        comentariosError.style.display = 'none'; // Ocultar el mensaje de error si los comentarios son válidos
+    }
+});
+
