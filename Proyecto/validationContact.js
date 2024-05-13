@@ -25,4 +25,16 @@ document.getElementById('inputAp').addEventListener('input', function(event) {  
     }
 });
 
+document.getElementById('inputDireccion').addEventListener('input', function(event) {                         // VALIDACION CAMPO DIRECCIÓN, formulario contacto
+    var inputDireccion = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+    var direccion2 = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para validar nombres
+    
+    var direccionError = document.getElementById('direccionError');
+    
+    if (!direccion2.test(inputDireccion)) { // Si el nombre no coincide con el patrón
+        direccionError.style.display = 'inline'; // Mostrar el mensaje de error
+    } else {
+        direccionError.style.display = 'none'; // Ocultar el mensaje de error si el nombre es válido
+    }
+});
 
