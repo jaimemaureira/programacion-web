@@ -219,11 +219,69 @@
 
     justify-content: center;
     align-items: center;
-    width: 1700px;
     height:600px;
 }
 
+.imagenInfo{
 
 
+    display: flex;
+    height: 600px;
+    background-color: aqua;
+    
+    
+}
 
+.infoPropiedades{
+    
+    padding: 25px;
+    text-align: center;
+    
+    
+}
 
+.botonContacto {
+    margin-top: 35px;
+    
+
+    
+}
+
+.cuadroTexto{
+
+    display: flex;
+    
+    text-align: justify;
+     
+       
+}
+
+.descripcionCasa h5{
+    text-align: left;
+}
+
+.descripcionCasa h4{
+    text-align: left;
+    font-size: 35px;
+    color: green;
+}
+
+.descripcionCasa p{
+    text-align: justify;
+}
+
+.info1{
+    text-align: left;
+    display: flex;
+    
+}
+
+.info2{
+    text-align: left;
+}
+
+@media screen and ( max-whidt: 1531px){
+    .imagenInfo{
+         display: block;
+    }
+} 
