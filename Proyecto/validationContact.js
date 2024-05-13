@@ -107,7 +107,7 @@ document.getElementById('comentarios').addEventListener('input', function(event)
     var comentariosError = document.getElementById('comentariosError');
 
     // Validación adicional con expresión regular
-    var regex = /[a-zA-Z]{3,}/; // Expresión regular para validar al menos 3 letras
+    var regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,}$/; // Expresión regular para validar al menos 3 letras
 
     if (!regex.test(comentarios)) { // Si los comentarios no cumplen con el patrón
         comentariosError.style.display = 'inline'; // Mostrar el mensaje de error
