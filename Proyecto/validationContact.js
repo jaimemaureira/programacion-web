@@ -87,3 +87,17 @@ document.getElementById('inputPhone2').addEventListener('input', function(event)
         telefono2Error.style.display = 'none'; // Ocultar el mensaje de error si el número es válido
     }
 });
+
+document.getElementById('inputMail1').addEventListener('blur', function(event) {                               // VALIDACIÓN MAIL
+    var mail = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+    var mail1Error = document.getElementById('mail1Error');
+
+    // Validación adicional con expresión regular
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar correo electrónico
+
+    if (!regex.test(mail)) { // Si el correo electrónico no coincide con el patrón
+        mail1Error.style.display = 'inline'; // Mostrar el mensaje de error
+    } else {
+        mail1Error.style.display = 'none'; // Ocultar el mensaje de error si el correo electrónico es válido
+    }
+});
