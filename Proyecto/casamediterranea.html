@@ -22,7 +22,7 @@
 
     <body class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-md">
             <div class="container-fluid">
                 <img src="iconos/apreton-de-manos.png" style="height: 100px;">
                 <a class="navbar-brand" style="margin-left: 20px;"
@@ -70,8 +70,8 @@
 
         <!--formato para las propiedades-->
 
-        <div class="container-fluid p-2">
-            <div  class="imagenInfo col-12">
+        <div class="container-fluid p-2" >
+            <div  class="imagenInfo">
                 <!--CARRUSEL DE FOTOS PROPIEDADES-->
                 <div class=" carruselFotosPropie col-7">
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -109,61 +109,48 @@
                         </button>
                     </div>
                 </div>
-                <div class=" infoPropiedades col-5">
-                    <!--CONTAINER CON DATOS DE LAS CASAS-->
-                    <h5>Casa estilo mediterráneo ubicada en Altos de
-                        Curauma, Valparaíso</h5>
-                    <br>
-                    
-                    
-                        <div class="cuadroTexto">
-                            <div class="info1 col-7">
-                                
-                                <div class="col-6"></div>
-                                <div>
-                                    <li>Metros cuadrados:</li>
-                                    <li>Metros construidos:</li>
-                                    <li>Cantidad habitaciones:</li>
-                                    <li>Cantidad de baños:</li>
-                                    <li>Terraza:</li>
-                                    <li>Tipo cocina:</li>
-                                    <li>Estacionamiento:</li>
-                                    <li>Lavanderia:</li>
-                                    <li>Piscina:</li>
-                                    <li>Áreas verdes:</li>
-                                </div>    
+                <div class="container-fluid"> 
+                    <div class=" infoPropiedades">
+                        <!--CONTAINER CON DATOS DE LAS CASAS-->
+                        <h5>Casa estilo mediterráneo ubicada en Altos de
+                            Curauma, Valparaíso</h5>
+                        <br>
+                        
+                        
+                            <div class="cuadroTexto">
+                                <div class="info1 col-6">
+                                    <div class="">
+                                        <li>Metros cuadrados:&emsp;&emsp;&emsp;1500</li>
+                                        <li>Metros construidos:&emsp;&ensp;&emsp;600</li>
+                                        <li>Cantidad habitaciones: &ensp;&nbsp; 6</li>
+                                        <li>Cantidad de baños:&emsp;&emsp;&ensp;&nbsp;4</li>
+                                        <li>Terraza:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;si</li>
+                                        <li>Tipo cocina:&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;americana</li>
+                                        <li>Estacionamiento:&emsp;&emsp;&emsp;&ensp;4</li>
+                                        <li>Lavanderia:&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;si</li>
+                                        <li>Piscina:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;si</li>
+                                        <li>Áreas verdes:&emsp;&emsp;&emsp;&emsp;&emsp;si</li>
+                                    </div>    
 
+                                    
+                                </div>
                                 
                             </div>
-                            <div class="info2 col-5">
-                                <ul>
-                                    1500 <br>
-                                    600 <br>
-                                    6 <br>
-                                    4 <br>
-                                    si <br>
-                                    americana <br>
-                                    4 <br>
-                                    si <br>
-                                    si <br>
-                                    si <br>
-                                </ul>
-                            </div>
+                        
+                        <div class="descripcionCasa">
+                            <h5 class="mt-5">Mas informacion:</h5>        
+                                <p>Casa muy bien ubicada a pasos
+                                de la ruta 68, sector de
+                                alta plusvalía.
+                                Cuenta con piscina temperada y bodega de gran
+                                tamaño.</p>
+                        
+                            <h4>Valor: 8.000 UF</h4>
+                        </div>        
+                        
+                        <div class="botonContacto col-12">
+                            <a class="btn btn-primary" href="contact.html"role="button">Contactar</a>
                         </div>
-                    
-                    <div class="descripcionCasa">
-                        <h5>Mas informacion:</h5>        
-                            <p>Casa muy bien ubicada a pasos
-                            de la ruta 68, sector de
-                            alta plusvalía.
-                            Cuenta con piscina temperada y bodega de gran
-                            tamaño.</p>
-                    
-                        <h4>Valor: 8.000 UF</h4>
-                    </div>        
-                    
-                    <div class="botonContacto col-12">
-                        <a class="btn btn-primary" href="contact.html"role="button">Contactar</a>
                     </div>
                 </div>
                     
@@ -177,8 +164,11 @@
             
         </div>    
          <!--mapa-->
-        <h3 style="text-align: center ">Ubicación de la propiedad</h3>
-        <div id="map" class=" container"></div>
+         <div class="container-fluid col-lg-12">
+            <h3 style="text-align: center ">Ubicación de la propiedad</h3>
+            <div id="map" class=" container-fluid"></div>
+         </div>
+        
         
     <!-- Footer -->
     <div class="container-fluid">

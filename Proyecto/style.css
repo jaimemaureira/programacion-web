@@ -213,6 +213,8 @@
     height: 400px;
     width: 100%;
     margin-bottom: 20px;
+    
+    
 }
 
 .carousel-item {
@@ -227,15 +229,21 @@
 
     display: flex;
     height: 600px;
-    background-color: aqua;
+    margin-bottom: 10px;
+    
     
     
 }
 
 .infoPropiedades{
     
-    padding: 25px;
-    text-align: center;
+    padding: 15px;
+    
+    
+    
+    
+    
+    
     
     
 }
@@ -280,8 +288,45 @@
     text-align: left;
 }
 
-@media screen and ( max-whidt: 1531px){
+
+@media screen and ( max-width: 1503px){
     .imagenInfo{
-         display: block;
+        
+        display: contents ;
+        
+        
+        
     }
-} 
+
+}@media screen and ( max-width: 1503px){
+    .carruselFotosPropie{
+        
+        width: 80%;
+        margin-left: 10%;
+        
+    }
+}
+
+}@media screen and ( max-width: 1503px){
+    .infoPropiedades{
+        
+        width: 80%;
+        text-align: center;
+        
+    }
+}
+
+@media  screen and (max-width: 1503px){
+    .info1{
+        
+        display: block;
+        columns: 1;
+        
+        text-align: left;
+        
+    }
+}
+
+
+
+
