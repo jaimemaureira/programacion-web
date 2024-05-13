@@ -1,6 +1,7 @@
 .navbar{
 
     background-image: url(imagenes/color\ fondo\ form.jpg); 
+    
 }
 
 
@@ -11,7 +12,9 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
+.navbar .container-fluid{
+    margin-left: 10px;
+}
 
 
 
@@ -164,17 +167,16 @@
 .d-block{
 
     height: 600px;
-    width: 1700px;
-    position: absolute;
+    width: 100%;
+    
 }
 
 .login{
     
     text-align: center;
     color: white;
-    margin-left: 20px;
-    width: 100%;
-    background-color: rgba(8, 1, 1, 0.7); 
+    background-color: rgba(8, 1, 1, 0.7);
+    width: 400px; 
 }
 
 .login i {
@@ -193,14 +195,15 @@
 
 .login input {
 
-    margin-left: 55px;
+    margin-left: 50px;
     width: 70%;
     
 }
 
 .login button{
-
+    
     margin-top: 70px;
+    ali
     
 }
 
@@ -213,46 +216,39 @@
     height: 400px;
     width: 100%;
     margin-bottom: 20px;
-    
-    
+ 
 }
 
+
+.carruselIndex{
+    width: 100%;
+    background-color: blue;
+    
+}
 .carousel-item {
 
     justify-content: center;
     align-items: center;
     height:600px;
+    
 }
 
 .imagenInfo{
 
-
-    display: flex;
+display: flex;
     height: 600px;
     margin-bottom: 10px;
-    
-    
-    
+  
 }
 
 .infoPropiedades{
     
     padding: 15px;
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 .botonContacto {
     margin-top: 35px;
-    
-
-    
+   
 }
 
 .cuadroTexto{
@@ -261,7 +257,6 @@
     
     text-align: justify;
      
-       
 }
 
 .descripcionCasa h5{
