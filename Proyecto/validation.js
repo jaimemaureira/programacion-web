@@ -171,4 +171,17 @@
                 phoneError.style.display = 'none'; // Ocultar el mensaje de error si el número es válido
             }
         });
-    
+
+        document.getElementById('inputMail').addEventListener('blur', function(event) {                               // VALIDACIÓN MAIL
+            var mail = event.target.value.trim(); // Eliminar espacios en blanco al principio y al final
+            var mailError = document.getElementById('mailError');
+        
+            // Validación adicional con expresión regular
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar correo electrónico
+        
+            if (!regex.test(mail)) { // Si el correo electrónico no coincide con el patrón
+                mailError.style.display = 'inline'; // Mostrar el mensaje de error
+            } else {
+                mailError.style.display = 'none'; // Ocultar el mensaje de error si el correo electrónico es válido
+            }
+        });
