@@ -112,7 +112,7 @@
 
             var direccionError = document.getElementById('direccionError');
 
-            if (direccion.length < 1) { // Si la longitud de la dirección es menor que 1
+            if (direccion.length < 3) { // Si la longitud de la dirección es menor que 3
                 direccionError.style.display = 'inline'; // Mostrar el mensaje de error
             } else {
                 direccionError.style.display = 'none'; // Ocultar el mensaje de error si la dirección tiene al menos un caracter
