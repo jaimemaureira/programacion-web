@@ -40,27 +40,27 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="index">Inicio</a>
+                                href="{% url 'index' %}">Inicio</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="quienes.html">Quienes somos</a>
+                                href="{% url 'quienes' %}">Quienes somos</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="arr_ventas">Venta y Arriendos</a>
+                                href="{% url 'arr_ventas' %}">Venta y Arriendos</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="contact.html">Contactanos</a>
+                                href="{% url 'contacto' %}">Contactanos</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="registro.html">Registrate</a>
+                                href="{% url 'regcliente' %}">Registrate</a>
                         </li>
 
                         <li class="nav_item">
@@ -87,22 +87,43 @@
                 Propiedades en venta:
             </h3>
         </div>
-        
+
+
         <div class="cajacards">
+            {% for casa in propiedades %}
+
+
             <div class="card">
                 <img src="https://img.freepik.com/foto-gratis/villa-lujo-piscina-espectacular-diseno-contemporaneo-arte-digital-bienes-raices-hogar-casa-propiedad-ge_1258-150749.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1712620800&semt=sph"
                     class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Casa Mediterranea</h5>
+                    <h5 class="card-title">{{casa.tipo_propiedad}}</h5>
                     <hr>
-                    <p class="card-text">Hermosa casa estilo mediterraneo con piscina 1.200 M2 ubicada en Altos de
-                        Curauma, Valparaiso</p>
+                    <p class="card-text">{{casa.descripcion}}</p>
                     <br>
-                    <a href="casamediterranea.html" class="btn btn-primary">IR</a>
+                    <a href="#" class="btn btn-primary">IR</a>
                 </div>
             </div>
-            
+
+
+            {% if forloop.counter == 4 %}
         </div>
+        <div class="cajacards">
+
+        {% endif %} 
+        {% if forloop.counter == 8 %}
+    </div>
+    <div class="cajacards">
+
+        {% endif %}        
+        {% if forloop.counter == 12 %}
+    </div>
+    <div class="cajacards">
+
+        {% endif %}
+        {% endfor %}            
+        </div>
+
     </div>
 
     <!--Propiedades en arriendo-->
