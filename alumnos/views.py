@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from . forms import UsuarioForm
+from . models import Alumno,Genero
 
 def index(request):
-    context={}
+    alumnos= Alumno.objects.all()
+    context={"alumnos":alumnos}
     return render(request, 'alumnos/index.html', context)
 
 def quienes(request):
@@ -32,12 +33,4 @@ def carrito(request):
 def arr_ventas(request):
     return render(request, 'alumnos/arr_ventas.html')
 
-def formulario(request):
-    if request.method == 'POST':
-        form = UsuarioForm(request.POST)
-        if form.is_valid():
-            form.save()
-           
-    else:
-        form = UsuarioForm()
-    return render(request, 'formulario.html', {'form': form})
+

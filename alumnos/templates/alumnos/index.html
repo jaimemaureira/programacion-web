@@ -308,4 +308,11 @@
     <script src="index.js"></script>
     <script src="validation.js"></script>
 
+    <br>
+    {% for alumno in alumnos %}
+
+        {{alumno.rut}}, {{alumno.nombre}},   {{alumno.apellido_paterno}}, {{alumno.apellidomaterno}},   {{alumno.id.genero}}   <br>
+
+    {%endfor%}
+
 </body>

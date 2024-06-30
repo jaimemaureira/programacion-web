@@ -1,26 +1,39 @@
 from django.db import models
 
-class Usuario(models.Model):
-    # Campos de texto
-    nombre_usuario = models.CharField(max_length=30, unique=True)
-    nombre = models.CharField(max_length=50)
-    apellidos = models.CharField(max_length=50)
-    email = models.EmailField(unique=True)
+class Genero(models.Model):
 
-    # Campos numéricos
-    edad = models.PositiveIntegerField()
+    id_genero  = models.AutoField(db_column='idGenero', primary_key=True)
+
+    genero     = models.CharField(max_length=20, blank=False, null=False)
+
+    def __str__(self):
+
+        return str(self.genero)
     
-    # Campos de fechas
-    fecha_nacimiento = models.DateField()
-    ultimo_login = models.DateTimeField(auto_now=True)
+class Alumno(models.Model):
 
-    # Campos booleanos
-    esta_activa = models.BooleanField(default=True)
-    es_personal = models.BooleanField(default=False)
+    rut              = models.CharField(primary_key=True, max_length=10)
 
-    # Campos con opciones
-    OPCIONES_ROL = [
-        ('usuario', 'Usuario normal'),
-        ('admin', 'Administrador'),
-    ]
-    roles = models.CharField(max_length=7, choices=OPCIONES_ROL, default='usuario')
+    nombre           = models.CharField(max_length=20)
+
+    apellido_paterno = models.CharField(max_length=20)
+
+    apellido_materno = models.CharField(max_length=20)
+
+    fecha_nacimiento = models.DateField(blank=False, null=False)
+
+    id_genero        = models.ForeignKey('Genero',on_delete=models.CASCADE, db_column='idGenero') 
+
+    telefono         = models.CharField(max_length=45)
+
+    email            = models.EmailField(unique=True, max_length=100, blank=True, null=True)
+
+    direccion        = models.CharField(max_length=50, blank=True, null=True) 
+
+    activo           = models.IntegerField()
+
+    def __str__(self):
+
+        return str(self.nombre)+" "+str(self.apellido_paterno)   
+
+
