@@ -1,0 +1,189 @@
+.navbar{
+
+    background-image: url(imagenes/color\ fondo\ form.jpg); 
+}
+
+
+
+.navbar-brand{
+
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+.row{
+
+    background-color: rgba(7, 1, 1, .80);
+    color: white;
+    
+}
+
+.btn-enviar{
+
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 550px;
+    background-color: white;
+    transition: all ease 500ms;
+    border-color: black;
+
+}
+
+.btn-enviar:hover{
+
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.nav-item a{
+
+    color: black;
+    transition: all ease 500ms;
+    
+}
+
+.nav-item a:hover{
+
+    transform: scale(1.2);
+}
+
+.card{
+
+    width: 18rem; 
+    margin-top: 30px;
+    
+}
+
+.card-img-top{
+
+    height: 200px;
+    
+}
+
+.titulo-1{
+
+    text-align: center;
+    margin-top: 40px;
+}
+
+.text-index{
+
+    text-align: center;
+    background-color: rgba(7, 1, 1, .80); 
+    color: white
+    
+    
+    
+}
+
+.cajacards{
+
+    display: flex; 
+       
+}
+
+.card {
+
+    width: 18rem;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+    
+}
+
+.wrapper {
+    width: 50%;
+    padding: 50px;
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    display: flex;
+}
+
+.fondo img {
+
+    width: 750px;
+    
+}
+
+.text {
+
+    color: black;
+    text-align: justify;
+   
+}
+
+
+
+.img_inmob1 {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    margin: 10px;  /*margen entre imagenes*/
+    /*margin-left: -15px;*/
+}
+
+.fondo{
+    height: 100px;
+    width: 100px;
+    background-image: url(https://esolutions.cl/wp-content/uploads/2015/11/quienes-somos.jpg);
+
+}
+
+
+.titulo-descripcion{
+
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.imagenpequena{
+
+    display: flex;
+    
+    height: 150px;
+    margin-left: 15px;
+   
+}
+
+.d-block{
+
+    height: 700px;
+    width: 1500px;
+}
+
+.login{
+    height: 500px;
+    background-color: rgba(8, 1, 1, 0.8); 
+    color: white;
+    
+}
+
+.login i {
+
+    font-size: 80px;
+    color: white;
+    margin-left: 42%;
+    
+    
+    
+    
+}
+
+.validation {
+text-align: center;
+width: 250px
+
+
+
+
+
+    
+}
+
