@@ -3,7 +3,6 @@ from .models import *
 from django.contrib.auth.decorators import login_required
 
 
-
 # Create your views here.
 
 def index(request): # Request: Django proporciona toda la información necesaria sobre una solicitud HTTP,
@@ -14,8 +13,18 @@ def index(request): # Request: Django proporciona toda la información necesaria
 def login(request): # Request: Django proporciona toda la información necesaria sobre una solicitud HTTP,
     return render(request, 'controlp/login.html')
 
+def quienes(request):
+    return render(request, 'adhogar/quienes.html')
+
+def contacto(request):
+    return render(request, 'adhogar/contact.html')
+
+def regcliente(request):
+    return render(request, 'adhogar/registro.html')
+
+
 def arr_ventas(request):
-    propiedades= Arriendo.objects.all() # propiedades: Esta es una variable que almacenará el resultado de la consulta a la base de datos.//Propiedad:  representa una tabla en la base de datos. 
+    propiedades= Inmueble.objects.all() # propiedades: Esta es una variable que almacenará el resultado de la consulta a la base de datos.//Propiedad:  representa una tabla en la base de datos. 
     context={"propiedades":propiedades}  # viene texto de arriba: Accede al administrador de objetos del modelo Propiedad. Este administrador permite realizar consultas a la base de datos.
     return render(request, 'adhogar/arr_ventas.html', context)
 
@@ -127,23 +136,3 @@ def menu(request):
 
 
 
-
-
-
-
-
-""" 
-from django.db import models
-
-class Book(models.Model):
-    title = models.CharField(max_length=200)
-    author = models.CharField(max_length=100)
-    pub_date = models.DateField()
-
-book = Book.objects.create(title='Django para Principiantes', author='John Doe', pub_date=date.today())
-book = Book.objects.get(id=1)
-book.title = 'Django Avanzado'
-book.save()
-book.delete()
-
-"""
